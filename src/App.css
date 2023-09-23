@@ -1,3 +1,8 @@
+* :not(hr) {
+  margin: 10px;
+  padding: 10px;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -54,4 +59,8 @@ form {
   border: 2px solid #ccc;
   padding: 20px;
 
+}
+
+.btn {
+  /*TODO*/
 }

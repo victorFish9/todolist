@@ -17,6 +17,11 @@ function App() {
     setTodos([...todos, desc]);
     console.log(todos);
   }
+
+  const handleDelete = (index) => {
+    const updatedList = todos.filter((_, i) => i !== index);
+    setTodos(updatedList);
+  }
   return (
 
     <>
@@ -36,12 +41,13 @@ function App() {
           </tr>
           <hr />
           {todos.map((todo, index) =>
-            <tr key={index}>
-              <td>{todo.desctiption}</td>
+            <><tr key={index}>
 
+              <td>{todo.desctiption}</td>
               <td>{todo.date}</td>
 
-            </tr>
+              <button className='btn' onClick={() => handleDelete(index)}>Delete</button>
+            </tr><hr /></>
           )}
         </tbody>
       </table>
