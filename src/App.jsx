@@ -30,14 +30,16 @@ function App() {
         <label>Description:</label>
         <input type='text' value={desc.desctiption} onChange={inputDescription} />
         <label>Date:</label>
-        <input type='text' value={desc.date} onChange={inputDate} />
+        <input type='date' value={desc.date} onChange={inputDate} />
         <input type='submit' value="add" />
       </form>
+
       <table>
         <tbody>
           <tr>
             <th>Description</th>
             <th>Date</th>
+
           </tr>
           <hr />
           {todos.map((todo, index) =>
@@ -49,7 +51,7 @@ function App() {
               <button className='btn' onClick={() => handleDelete(index)}>Delete</button>
             </tr><hr /></>
           )}
-        </tbody>
+        </tbody >
       </table>
     </>
   )
